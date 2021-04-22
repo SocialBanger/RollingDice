@@ -1,0 +1,43 @@
+{
+  "update_id": 476549599,
+  "message": {
+    "chatId": 151367788,
+    "groupMessage": false,
+    "userMessage": true,
+    "channelMessage": false,
+    "superGroupMessage": false,
+    "command": true,
+    "reply": false,
+    "message_id": 7,
+    "from": {
+      "bot": false,
+      "id": 151367788,
+      "first_name": "Sergey",
+      "is_bot": false,
+      "last_name": "Ivanenko",
+      "username": "ivanenko_sergey",
+      "language_code": "en"
+    },
+    "date": 1618670317,
+    "chat": {
+      "groupChat": false,
+      "userChat": true,
+      "channelChat": false,
+      "superGroupChat": false,
+      "id": 151367788,
+      "type": "private",
+      "first_name": "Sergey",
+      "last_name": "Ivanenko",
+      "username": "ivanenko_sergey"
+    },
+    "text": "/settings",
+    "entities": [
+      {
+        "type": "bot_command",
+        "offset": 0,
+        "length": 6
+      }
+    ],
+    "new_chat_members": []
+  }
+}
