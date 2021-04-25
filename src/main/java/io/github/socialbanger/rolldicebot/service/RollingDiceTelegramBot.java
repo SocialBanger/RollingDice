@@ -1,4 +1,4 @@
-package io.github.sergey_ivanenko.rolldicebot.service;
+package io.github.socialbanger.rolldicebot.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;

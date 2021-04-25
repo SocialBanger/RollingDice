@@ -1,7 +1,7 @@
-package io.github.sergey_ivanenko.rolldicebot.service;
+package io.github.socialbanger.rolldicebot.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.github.sergey_ivanenko.rolldicebot.RolldicebotApplicationTests;
+import io.github.socialbanger.rolldicebot.RolldicebotApplicationTests;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -8,7 +8,7 @@
 		<version>2.4.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>io.github.sergey_ivanenko</groupId>
+	<groupId>io.github.socialbanger</groupId>
 	<artifactId>rolldicebot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>rolldicebot</name>

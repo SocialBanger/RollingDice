@@ -1,8 +1,8 @@
-package io.github.sergey_ivanenko.rolldicebot;
+package io.github.socialbanger.rolldicebot;
 
-import io.github.sergey_ivanenko.rolldicebot.config.Mapper;
-import io.github.sergey_ivanenko.rolldicebot.service.MessageService;
-import io.github.sergey_ivanenko.rolldicebot.service.RollingDiceTelegramBot;
+import io.github.socialbanger.rolldicebot.config.Mapper;
+import io.github.socialbanger.rolldicebot.service.MessageService;
+import io.github.socialbanger.rolldicebot.service.RollingDiceTelegramBot;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

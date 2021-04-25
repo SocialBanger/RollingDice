@@ -1,7 +1,7 @@
-package io.github.sergey_ivanenko.rolldicebot.service;
+package io.github.socialbanger.rolldicebot.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.github.sergey_ivanenko.rolldicebot.RolldicebotApplicationTests;
+import io.github.socialbanger.rolldicebot.RolldicebotApplicationTests;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
