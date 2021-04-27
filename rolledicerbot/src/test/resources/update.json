@@ -1,0 +1,40 @@
+{
+  "update_id": 476549612,
+  "message": {
+    "chatId": 691267727,
+    "superGroupMessage": false,
+    "groupMessage": false,
+    "command": true,
+    "reply": false,
+    "userMessage": true,
+    "channelMessage": false,
+    "message_id": 29,
+    "from": {
+      "bot": false,
+      "id": 691267727,
+      "first_name": "TryWill",
+      "is_bot": false,
+      "username": "TryWill",
+      "language_code": "en"
+    },
+    "date": 1618953972,
+    "chat": {
+      "channelChat": false,
+      "superGroupChat": false,
+      "userChat": true,
+      "groupChat": false,
+      "id": 691267727,
+      "type": "private",
+      "first_name": "TryWill",
+      "username": "TryWill"
+    },
+    "text": "hello",
+    "entities": [
+      {
+        "type": "bot_command",
+        "offset": 0,
+        "length": 6
+      }
+    ]
+  }
+}
