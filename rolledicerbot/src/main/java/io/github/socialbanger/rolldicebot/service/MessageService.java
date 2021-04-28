@@ -18,9 +18,7 @@ import java.util.List;
 public class MessageService {
 
     @Autowired
-    RandomService randomService;
-
-    private int sumDiceRoll;
+    private RandomService randomService;
 
     public SendMessage onUpdateReceived(Update update) {
         SendMessage sendMessage = new SendMessage();
@@ -30,47 +28,50 @@ public class MessageService {
             sendMessage.setReplyMarkup(getMainMenuKeyboard());
             if (message.hasText()) {
                 String msgText = message.getText();
-                if (msgText.equals("/start")) {
-                    return sendMessage.setText("Hello, my Friend!");
-                } else if (msgText.equals("\uD83D\uDD79")) {
-                    return sendMessage.setText("Here will be a library for D&D mechanics.");
-                } else if (msgText.equals("Drop dice \uD83C\uDFB2")) {
-                    sendMessage.setReplyMarkup(getDiceMenuKeyboard());
-                    return sendMessage.setText("Choose dice...");
-                } else if (msgText.equals("Dice D4")) {
-                    Dice diceD4 = new Dice(4);
-                    sumDiceRoll = randomService.getRoll(diceD4.getDiceType());
-                    return sendMessage.setText("" + sumDiceRoll);
-                } else if (msgText.equals("Dice D6")) {
-                    Dice diceD6 = new Dice(6);
-                    sumDiceRoll = randomService.getRoll(diceD6.getDiceType());
-                    return sendMessage.setText("" + sumDiceRoll);
-                } else if (msgText.equals("Dice D8")) {
-                    Dice diceD8 = new Dice(8);
-                    sumDiceRoll = randomService.getRoll(diceD8.getDiceType());
-                    return sendMessage.setText("" + sumDiceRoll);
-                } else if (msgText.equals("Dice D10")) {
-                    Dice diceD10 = new Dice(10);
-                    sumDiceRoll = randomService.getRoll(diceD10.getDiceType());
-                    return sendMessage.setText("" + sumDiceRoll);
-                } else if (msgText.equals("Dice D12")) {
-                    Dice diceD12 = new Dice(12);
-                    sumDiceRoll = randomService.getRoll(diceD12.getDiceType());
-                    return sendMessage.setText("" + sumDiceRoll);
-                } else if (msgText.equals("Dice D20")) {
-                    Dice diceD20 = new Dice(20);
-                    sumDiceRoll = randomService.getRoll(diceD20.getDiceType());
-                    return sendMessage.setText("" + sumDiceRoll);
-                } else if (msgText.equals("BACK \uD83D\uDD19")) {
-                    sendMessage.setReplyMarkup(getMainMenuKeyboard());
-                    return sendMessage.setText("Choose action...");
-                } else if (msgText.equals("/help") || msgText.equals("Help️️⁉️")) {
-                    String helpText = "С помощью меня вы можете сделать бросок нужной костяшкой. " +
-                            "Используйте MENU для выбора команд!";
-                    return sendMessage.setText(helpText);
-                } else if (msgText.equals("About us \uD83E\uDDD0️️️️")) {
-                    sendMessage.setReplyMarkup(getAboutInlineKeyboardMarkup());
-                    return sendMessage.setText("Just click ⬇️");
+                int sumDiceRoll;
+                switch (msgText) {
+                    case "/start":
+                        return sendMessage.setText("Hello, my Friend!");
+                    case "\uD83D\uDD79":
+                        return sendMessage.setText("Here will be a library for D&D mechanics.");
+                    case "Drop dice \uD83C\uDFB2":
+                        sendMessage.setReplyMarkup(getDiceMenuKeyboard());
+                        return sendMessage.setText("Choose dice...");
+                    case "Dice D4":
+                        Dice diceD4 = new Dice(4);
+                        sumDiceRoll = randomService.getRoll(diceD4.getDiceType());
+                        return sendMessage.setText("" + sumDiceRoll);
+                    case "Dice D6":
+                        Dice diceD6 = new Dice(6);
+                        sumDiceRoll = randomService.getRoll(diceD6.getDiceType());
+                        return sendMessage.setText("" + sumDiceRoll);
+                    case "Dice D8":
+                        Dice diceD8 = new Dice(8);
+                        sumDiceRoll = randomService.getRoll(diceD8.getDiceType());
+                        return sendMessage.setText("" + sumDiceRoll);
+                    case "Dice D10":
+                        Dice diceD10 = new Dice(10);
+                        sumDiceRoll = randomService.getRoll(diceD10.getDiceType());
+                        return sendMessage.setText("" + sumDiceRoll);
+                    case "Dice D12":
+                        Dice diceD12 = new Dice(12);
+                        sumDiceRoll = randomService.getRoll(diceD12.getDiceType());
+                        return sendMessage.setText("" + sumDiceRoll);
+                    case "Dice D20":
+                        Dice diceD20 = new Dice(20);
+                        sumDiceRoll = randomService.getRoll(diceD20.getDiceType());
+                        return sendMessage.setText("" + sumDiceRoll);
+                    case "BACK \uD83D\uDD19":
+                        sendMessage.setReplyMarkup(getMainMenuKeyboard());
+                        return sendMessage.setText("Choose action...");
+                    case "/help":
+                    case "Help️️⁉️":
+                        String helpText = "С помощью меня вы можете сделать бросок нужной костяшкой. " +
+                                "Используйте MENU для выбора команд!";
+                        return sendMessage.setText(helpText);
+                    case "About us \uD83E\uDDD0️️️️":
+                        sendMessage.setReplyMarkup(getAboutInlineKeyboardMarkup());
+                        return sendMessage.setText("Just click ⬇️");
                 }
             }
         }
