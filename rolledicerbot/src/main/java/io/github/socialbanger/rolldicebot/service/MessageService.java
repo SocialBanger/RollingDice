@@ -75,7 +75,7 @@ public class MessageService {
                 }
             }
         }
-        return sendMessage.setText("I don't know this command!");
+        return sendMessage.setText("I don't know this command! Try another command!");
     }
 
     private ReplyKeyboardMarkup getMainMenuKeyboard() {
@@ -110,28 +110,20 @@ public class MessageService {
         replyKeyboardMarkup.setOneTimeKeyboard(false);
 
         List<KeyboardRow> keyboard = new ArrayList<>();
-        KeyboardRow diceD4 = new KeyboardRow();
-        KeyboardRow diceD6 = new KeyboardRow();
-        KeyboardRow diceD8 = new KeyboardRow();
-        KeyboardRow diceD10 = new KeyboardRow();
-        KeyboardRow diceD12 = new KeyboardRow();
-        KeyboardRow diceD20 = new KeyboardRow();
+        KeyboardRow diceD4D6D8 = new KeyboardRow();
+        KeyboardRow diceD10D12D20 = new KeyboardRow();
         KeyboardRow backButton = new KeyboardRow();
 
-        diceD4.add(new KeyboardButton("Dice D4"));
-        diceD6.add(new KeyboardButton("Dice D6"));
-        diceD8.add(new KeyboardButton("Dice D8"));
-        diceD10.add(new KeyboardButton("Dice D10"));
-        diceD12.add(new KeyboardButton("Dice D12"));
-        diceD20.add(new KeyboardButton("Dice D20"));
+        diceD4D6D8.add(new KeyboardButton("Dice D4"));
+        diceD4D6D8.add(new KeyboardButton("Dice D6"));
+        diceD4D6D8.add(new KeyboardButton("Dice D8"));
+        diceD10D12D20.add(new KeyboardButton("Dice D10"));
+        diceD10D12D20.add(new KeyboardButton("Dice D12"));
+        diceD10D12D20.add(new KeyboardButton("Dice D20"));
         backButton.add(new KeyboardButton("BACK \uD83D\uDD19"));
 
-        keyboard.add(diceD4);
-        keyboard.add(diceD6);
-        keyboard.add(diceD8);
-        keyboard.add(diceD10);
-        keyboard.add(diceD12);
-        keyboard.add(diceD20);
+        keyboard.add(diceD4D6D8);
+        keyboard.add(diceD10D12D20);
         keyboard.add(backButton);
 
         replyKeyboardMarkup.setKeyboard(keyboard);

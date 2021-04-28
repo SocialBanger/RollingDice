@@ -8,9 +8,7 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import java.io.File;
 import java.io.IOException;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 //@SpringBootTest(classes = {TelegramBot.class, Mapper.class, MessageService.class, RandomService.class})
 class MessageServiceTest extends RolledicerbotApplicationTests {
@@ -27,7 +25,7 @@ class MessageServiceTest extends RolledicerbotApplicationTests {
         Update update = objectMapper.readValue(new File("src/test/resources/update.json"), Update.class);
         SendMessage actualMessage = messageService.onUpdateReceived(update);
         String actualResult = actualMessage.getText();
-        SendMessage expectedMessage = makeMessage("I don't know this command!");
+        SendMessage expectedMessage = makeMessage("I don't know this command! Try another command!");
         String expectedResult = expectedMessage.getText();
         assertEquals(expectedResult, actualResult);
     }
@@ -47,7 +45,7 @@ class MessageServiceTest extends RolledicerbotApplicationTests {
         Update update = objectMapper.readValue(new File("src/test/resources/settings.json"), Update.class);
         SendMessage actualMessage = messageService.onUpdateReceived(update);
         String actualResult = actualMessage.getText();
-        SendMessage expectedMessage = makeMessage("I don't know this command!");
+        SendMessage expectedMessage = makeMessage("I don't know this command! Try another command!");
         String expectedResult = expectedMessage.getText();
         assertEquals(expectedResult, actualResult);
     }
