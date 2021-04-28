@@ -1,8 +1,6 @@
 package io.github.socialbanger.rolldicebot.service;
 
 import org.springframework.stereotype.Service;
-
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Service
