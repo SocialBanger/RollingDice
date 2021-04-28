@@ -3,10 +3,12 @@ package io.github.socialbanger.rolldicebot.service;
 import io.github.socialbanger.rolldicebot.RolledicerbotApplicationTests;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class RandomServiceTest extends RolledicerbotApplicationTests {
 
-    RandomService randomService = new RandomService();
+    @Autowired
+    RandomService randomService;
 
     @Test
     public void getRollSetD4Test() {

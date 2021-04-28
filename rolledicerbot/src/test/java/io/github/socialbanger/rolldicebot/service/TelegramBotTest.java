@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import java.io.File;
 import java.io.IOException;
 
-//@SpringBootTest(classes = {TelegramBot.class, Mapper.class})
+//@SpringBootTest(classes = {TelegramBot.class, Mapper.class, MessageService.class, RandomService.class})
 class TelegramBotTest extends RolledicerbotApplicationTests {
 
     @Autowired
