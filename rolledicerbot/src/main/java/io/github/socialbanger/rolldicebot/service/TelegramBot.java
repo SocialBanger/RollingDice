@@ -22,10 +22,10 @@ public class TelegramBot extends TelegramLongPollingBot {
     private String botToken;
 
     @Autowired
-    ObjectMapper objectMapper;
+    private ObjectMapper objectMapper;
 
     @Autowired
-    MessageService messageService;
+    private MessageService messageService;
 
     @Override
     public void onUpdateReceived(Update update) {
